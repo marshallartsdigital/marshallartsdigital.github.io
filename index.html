@@ -1,7 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listings</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Newsreader:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <header>
+        <img src="logo.png" alt="Logo">
+    </header>
+
+    <div class="event-listing">
+        <div class="event">
+            <div class="event-info">
+                <div class="date">August 25, 2024</div>
+                <div class="artist">John Doe Band</div>
+                <div class="venue">The Grand Theater</div>
+            </div>
+            <button class="buy-tickets" onclick="buyTickets()">Buy Tickets</button>
+        </div>
+        <div class="event">
+            <div class="event-info">
+                <div class="date">September 1, 2024</div>
+                <div class="artist">Jane Smith</div>
+                <div class="venue">City Concert Hall</div>
+            </div>
+            <button class="buy-tickets" onclick="buyTickets()">Buy Tickets</button>
+        </div>
+        <!-- Add more events as needed -->
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

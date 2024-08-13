@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #f8f8f8;
+}
+
+header {
+    height: 112px;
+    background: linear-gradient(90deg, #6B60FA 0%, #3D1B8D 50%, #170029 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header img {
+    height: 80px; /* Adjust the logo height as needed */
+}
+
+.event-listing {
+    padding: 20px;
+}
+
+.event {
+    margin-bottom: 30px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.event-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.date {
+    font-size: 24pt;
+    font-family: 'Inter', sans-serif;
+    color: #333333;
+    flex: 1;
+}
+
+.artist {
+    font-size: 30pt;
+    font-family: 'Newsreader', serif;
+    color: #333333;
+    text-align: right;
+    flex: 2;
+}
+
+.venue {
+    font-size: 18pt;
+    font-family: 'Inter', sans-serif;
+    color: #666666;
+    margin-top: 5px;
+    text-align: left;
+}
+
+.buy-tickets {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16pt;
+    font-family: 'Inter', sans-serif;
+    color: #ffffff;
+    background-color: #6B60FA;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    text-align: center;
+    display: block;
+    width: fit-content;
+}
+
+.buy-tickets:hover {
+    background-color: #5747D4;
+}
