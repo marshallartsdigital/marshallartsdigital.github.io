@@ -7,3 +7,4 @@ function toggleEventDetails(eventElement) {
     const eventDetails = eventElement.querySelector('.event-details');
     eventDetails.style.display = eventDetails.style.display === 'block' ? 'none' : 'block';
 }
+
