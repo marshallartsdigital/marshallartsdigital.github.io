@@ -5,18 +5,21 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    overflow-y: scroll;
 }
 
 header {
-    height: 112px;
-    background: linear-gradient(90deg, #6B60FA 0%, #3D1B8D 50%, #170029 100%);
+    height: 100px;
+    background: rgb(238,174,202);
+    background-color: #8BC6EC;
+    background-image: linear-gradient(135deg, #6B60FA 0%, #3D1B8D  51%, #170029 100%);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 header h1 {
-    font-family: 'Newsreader', serif;
+    font-family: 'Pirata One', serif;
     font-weight: 400;
     color: #ffffff;
     font-size: 32pt;
@@ -25,10 +28,10 @@ header h1 {
 
 .intro-text {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 40px;
     font-family: 'Newsreader', serif;
     font-weight: 400;
-    font-size: 18pt;
+    font-size: 22pt;
     color: #333333;
 }
 
@@ -45,7 +48,8 @@ header h1 {
 }
 
 .event {
-    margin-bottom: 50px;
+    margin-bottom: 100px;
+    cursor: pointer;
 }
 
 .event-info {
@@ -63,75 +67,104 @@ header h1 {
 }
 
 .date {
-    font-size: 24pt;
+    font-size: 20pt;
     font-family: 'Inter', sans-serif;
     color: #333333;
 }
 
 .venue {
-    font-size: 18pt;
+    font-size: 14pt;
     font-family: 'Inter', sans-serif;
     color: #666666;
     margin-top: 10px;
 }
 
 .artist {
-    font-size: 30pt;
+    font-size: 28pt;
     font-family: 'Newsreader', serif;
     color: #333333;
     text-align: right;
     flex: 2;
 }
 
+.event-details {
+    display: none; /* Hidden by default */
+    margin-top: 20px;
+    padding: 15px;
+}
+
+.event-description {
+    font-size: 10pt;
+    margin-bottom: 15px;
+    line-height: 25px;
+}
+
+.extra-info p {
+    font-size: 10pt;
+    margin: 5px 0;
+    line-height: 25px;
+}
+
 .buy-tickets {
-    margin-top: 30px;
-    padding: 10px 20px;
-    font-size: 16pt;
-    font-family: 'Inter', sans-serif;
-    color: #ffffff;
-    background-color: #6B60FA;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    text-align: center;
-    display: block;
+    background-image: linear-gradient(to right, #6B60FA 0%, #3D1B8D  51%, #170029 100%);             
+    margin: 10px;             
+    padding: 15px 45px;             
+    text-align: center;             
+    text-transform: uppercase;             
+    transition: 0.5s;             
+    background-size: 200% auto;             
+    color: white;                         
+    box-shadow: 0 0 20px #eee;             
+    border-radius: 25px;             
+    display: block;           
+    width: 100%;
+    Max-width: 200px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .buy-tickets:hover {
-    background-color: #5747D4;
+    background-position: right center; /* change the direction of the change here */               
+    color: #fff;             
+    text-decoration: none;           
 }
 
+/* Footer */
 footer {
-    height: 112px;
-    background-color: #F7F7F7;
+    width: 100%;
+    height: 100px;
+    background-color: #FFF;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    bottom: 0;
 }
 
 footer p {
     font-family: 'Inter', sans-serif;
-    font-size: 14pt;
+    font-size: 10pt;
     color: #8E8E8E;
     margin: 0;
 }
 
 /* Media Queries for Mobile Devices */
 @media (max-width: 768px) {
+    body {
+        overflow-y: scroll; /* Ensure scrollbar is always visible on mobile */
+    }
     .container {
         width: 100%;
         padding: 20px;
     }
 
     .event-info {
-        flex-direction: column; /* Stack items vertically on mobile */
-        align-items: center; /* Center align content */
+        flex-direction: column;
+        align-items: center;
     }
 
     .left-section {
-        margin-right: 0; /* Remove margin for mobile */
+        margin-right: 0;
         text-align: center;
     }
 
@@ -146,8 +179,12 @@ footer p {
 
     .artist {
         font-size: 22pt;
-        text-align: center; /* Ensure it's centered on mobile */
+        text-align: center;
         margin-top: 10px;
+    }
+
+    .event-details {
+        padding: 10px;
     }
 
     .buy-tickets {
