@@ -24,7 +24,7 @@ header {
 header h1 {
     font-family: 'Pirata One', serif;
     font-weight: 400;
-    color: #ffffff;
+    color: #FFF;
     font-size: 32pt;
     margin: 0;
 }
@@ -190,7 +190,7 @@ footer p {
     }
 
     .date {
-        font-size: 18pt;
+        font-size: 16pt;
     }
 
     .venue {
@@ -199,7 +199,7 @@ footer p {
     }
 
     .artist {
-        font-size: 22pt;
+        font-size: 24pt;
         text-align: center;
         margin-top: 10px;
     }
