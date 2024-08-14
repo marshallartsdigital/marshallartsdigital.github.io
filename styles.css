@@ -1,10 +1,10 @@
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
-    background-color: #ffffff; /* White background */
+    background-color: #ffffff;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Ensure the body takes at least the full height of the viewport */
+    min-height: 100vh;
 }
 
 header {
@@ -17,7 +17,7 @@ header {
 
 header h1 {
     font-family: 'Newsreader', serif;
-    font-weight: 400; /* Normal weight */
+    font-weight: 400;
     color: #ffffff;
     font-size: 32pt;
     margin: 0;
@@ -25,19 +25,19 @@ header h1 {
 
 .intro-text {
     text-align: center;
-    margin-top: 20px; /* Space between header and text */
+    margin-top: 20px;
     font-family: 'Newsreader', serif;
-    font-weight: 400; /* Normal weight */
+    font-weight: 400;
     font-size: 18pt;
     color: #333333;
 }
 
 .container {
     margin: 0 auto;
-    width: calc(100% - 600px); /* 300px margin on left and right */
-    max-width: 1200px; /* Optional: Set a maximum width */
-    flex: 1; /* This ensures the container takes up remaining space, pushing the footer to the bottom */
-    padding-top: 40px; /* Add padding between header and content */
+    width: calc(100% - 600px);
+    max-width: 1200px;
+    flex: 1;
+    padding-top: 40px;
 }
 
 .event-listing {
@@ -45,46 +45,48 @@ header h1 {
 }
 
 .event {
-    margin-bottom: 50px; /* Increased space between events */
+    margin-bottom: 50px;
 }
 
 .event-info {
     display: flex;
-    flex-direction: column; /* Stack items vertically on mobile */
-    margin-bottom: 20px; /* Increased space between date, venue, and artist */
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
 .left-section {
     display: flex;
     flex-direction: column;
-    margin-right: 0; /* Remove margin for mobile */
+    flex: 1;
+    margin-right: 20px;
 }
 
 .date {
-    font-size: 20pt; /* Adjust font size for mobile */
+    font-size: 24pt;
     font-family: 'Inter', sans-serif;
     color: #333333;
 }
 
 .venue {
-    font-size: 16pt; /* Adjust font size for mobile */
+    font-size: 18pt;
     font-family: 'Inter', sans-serif;
     color: #666666;
-    margin-top: 5px; /* Adjust space between date and venue */
+    margin-top: 10px;
 }
 
 .artist {
-    font-size: 24pt; /* Adjust font size for mobile */
+    font-size: 30pt;
     font-family: 'Newsreader', serif;
     color: #333333;
-    text-align: center; /* Center align on mobile */
-    margin-top: 10px; /* Space between venue and artist */
+    text-align: right;
+    flex: 2;
 }
 
 .buy-tickets {
-    margin-top: 20px; /* Adjust space between event info and button */
+    margin-top: 30px;
     padding: 10px 20px;
-    font-size: 14pt; /* Adjust font size for mobile */
+    font-size: 16pt;
     font-family: 'Inter', sans-serif;
     color: #ffffff;
     background-color: #6B60FA;
@@ -93,9 +95,7 @@ header h1 {
     cursor: pointer;
     text-align: center;
     display: block;
-    width: 100%; /* Full width button on mobile */
-    max-width: 200px; /* Max width for the button */
-    margin-left: auto; /* Center the button */
+    margin-left: auto;
     margin-right: auto;
 }
 
@@ -120,17 +120,9 @@ footer p {
 
 /* Media Queries for Mobile Devices */
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 24pt; /* Adjust header font size */
-    }
-
-    .intro-text p {
-        font-size: 16pt; /* Adjust intro text font size */
-    }
-
     .container {
-        width: 100%; /* Full width for mobile */
-        padding-top: 20px; /* Reduce padding on mobile */
+        width: 100%;
+        padding: 20px;
     }
 
     .event-info {
@@ -140,26 +132,27 @@ footer p {
 
     .left-section {
         margin-right: 0; /* Remove margin for mobile */
-        text-align: center; /* Center align content */
+        text-align: center;
     }
 
     .date {
-        font-size: 18pt; /* Adjust font size for mobile */
+        font-size: 18pt;
     }
 
     .venue {
-        font-size: 14pt; /* Adjust font size for mobile */
-        margin-top: 5px; /* Adjust space between date and venue */
+        font-size: 14pt;
+        margin-top: 5px;
     }
 
     .artist {
-        font-size: 22pt; /* Adjust font size for mobile */
-        margin-top: 10px; /* Space between venue and artist */
+        font-size: 22pt;
+        text-align: center; /* Ensure it's centered on mobile */
+        margin-top: 10px;
     }
 
     .buy-tickets {
-        padding: 12px 24px; /* Adjust padding for mobile */
-        font-size: 16pt; /* Adjust font size for mobile */
-        max-width: 100%; /* Ensure button fits within the container */
+        padding: 12px 24px;
+        font-size: 16pt;
+        max-width: 100%;
     }
 }
