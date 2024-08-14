@@ -1,3 +1,7 @@
+*{
+    Box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
@@ -5,7 +9,6 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    overflow-y: scroll;
 }
 
 header {
@@ -37,8 +40,8 @@ header h1 {
 
 .container {
     margin: 0 auto;
-    width: calc(100% - 600px);
-    max-width: 1200px;
+    max-width: 900px;
+    Width: 80%;
     flex: 1;
     padding-top: 40px;
 }
@@ -150,9 +153,8 @@ footer p {
 
 /* Media Queries for Mobile Devices */
 @media (max-width: 768px) {
-    body {
-        overflow-y: scroll; /* Ensure scrollbar is always visible on mobile */
-    }
+    
+
     .container {
         width: 100%;
         padding: 20px;
