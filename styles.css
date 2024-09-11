@@ -109,14 +109,14 @@ header h1 {
 }
 
 .buy-tickets {
-    background-image: linear-gradient(to right, #6B60FA 0%, #3D1B8D  51%, #170029 100%);             
+    background-image: linear-gradient(to right, #f39aff 0%, #ffb5d0  50%, #fd5a36 100%);             
     margin: 40px;             
     padding: 15px 45px;             
     text-align: center;             
     text-transform: uppercase;             
     transition: 0.5s;             
     background-size: 200% auto;             
-    color: white;                         
+    color: black;                         
     box-shadow: 0 0 20px #eee;             
     border-radius: 25px;             
     display: block;           
