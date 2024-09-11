@@ -13,9 +13,9 @@ body {
 
 header {
     height: 100px;
-    background: rgb(238,174,202);
-    background-color: #8BC6EC;
-    background-image: linear-gradient(135deg, #6B60FA 0%, #3D1B8D  51%, #170029 100%);
+    background: rgb(253,90,54);
+    background-color: #fd5a36;
+    background-image: linear-gradient(135deg, #f39aff 0%, #ffb5d0  50%, #fd5a36 100%);
     display: flex;
     justify-content: center;
     align-items: center;
