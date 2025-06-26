@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Follow Us on Instagram</title>
 
-  <!-- Fonts: Epilogue Black and Roboto Mono -->
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@900&family=Roboto+Mono&display=swap" rel="stylesheet">
 
   <style>
@@ -17,7 +17,7 @@
     body {
       margin: 0;
       padding: 0;
-      height: 100vh;
+      min-height: 100vh;
       background: radial-gradient(circle at var(--x) var(--y), #ffb5d0, #ffc4db, #fd5a36);
       transition: background 0.2s ease;
       font-family: Arial, sans-serif;
@@ -25,7 +25,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      overflow: hidden;
+      justify-content: space-between;
     }
 
     .logo {
@@ -42,6 +42,8 @@
       align-items: center;
       justify-content: center;
       width: 100%;
+      padding: 20px;
+      box-sizing: border-box;
     }
 
     .ig-button {
@@ -53,6 +55,7 @@
       padding: 20px 30px;
       border-radius: 12px;
       transition: background-color 0.3s ease;
+      max-width: 100%;
     }
 
     .ig-button:hover {
@@ -63,12 +66,30 @@
       width: 40px;
       height: 40px;
       fill: white;
+      flex-shrink: 0;
     }
 
     .text {
       font-family: 'Roboto Mono', monospace;
       font-size: 1.2rem;
       color: white;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      padding: 20px;
+      color: black;
+      font-family: 'Roboto Mono', monospace;
+    }
+
+    /* Responsive padding for mobile */
+    @media (max-width: 600px) {
+      .ig-button {
+        width: 100%;
+        max-width: 90%;
+        padding: 15px 20px;
+      }
     }
   </style>
 </head>
@@ -77,30 +98,30 @@
   <div class="logo">STRANGE PLACE</div>
 
   <div class="center-content">
-    <!-- Instagram Link Button -->
     <a class="ig-button" href="https://instagram.com/strangeplaceconcerts" target="_blank" rel="noopener noreferrer">
-      <svg class="instagram-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="40" height="40">
+      <svg class="instagram-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
         <path d="M7.75 2A5.75 5.75 0 002 7.75v8.5A5.75 5.75 0 007.75 22h8.5A5.75 5.75 0 0022 16.25v-8.5A5.75 5.75 0 0016.25 2h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm5.5-.75a1.25 1.25 0 11-2.5 0 1.25 1.25 0 012.5 0zM12 9.5a2.5 2.5 0 100 5 2.5 2.5 0 000-5z"/>
       </svg>
       <div class="text">Follow us on Instagram to stay in the loop</div>
     </a>
   </div>
 
+  <footer>
+    &copy; <span id="year"></span> Strange Place Concerts | Part of the <a href="https://www.marshall-arts.com">Marshall Arts</a> family
+  </footer>
+
   <script>
+    // Dynamic background gradient movement
     document.addEventListener('mousemove', function(e) {
       const x = (e.clientX / window.innerWidth) * 100;
       const y = (e.clientY / window.innerHeight) * 100;
       document.documentElement.style.setProperty('--x', `${x}%`);
       document.documentElement.style.setProperty('--y', `${y}%`);
     });
+
+    // Dynamic current year
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+
 </body>
-<footer>
-        <p>Copyright &copy; 
-                                            <script>
-                                            document.write(new Date().getFullYear())
-                                            </script>
-                                             Strange Place Concerts Ltd.
-                                        </p>
-    </footer>
 </html>
